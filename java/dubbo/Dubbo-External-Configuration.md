@@ -10,7 +10,7 @@
 
 
 
-在前面的例子中，无论是服务提供方，还是服务消费方，均需要转配相关配置Bean：
+在[Dubbo 注解驱动](Dubbo-Annotation-Driven.md)例子中，无论是服务提供方，还是服务消费方，均需要转配相关配置Bean：
 
 ```java
     @Bean
