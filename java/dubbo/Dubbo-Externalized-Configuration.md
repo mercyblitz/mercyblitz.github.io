@@ -1,4 +1,4 @@
-# Dubbo 外部化配置（External Configuration）
+# Dubbo 外部化配置（Externalized Configuration）
 
 
 
