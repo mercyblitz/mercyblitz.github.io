@@ -22,7 +22,7 @@
 
 
 
-## [外部化配置（External Configuration）](Dubbo-Externalized-Configuration.md)
+## [外部化配置（Externalized Configuration）](Dubbo-Externalized-Configuration.md)
 
 
 
