@@ -1,13 +1,13 @@
 # 小马哥的技术博客
 
 
-## Java 系列
+## [Java 系列](java/)
 
 
-### [Dubbo 系列](dubbo)
+### [Dubbo 系列](java/dubbo)
 
 
-### [Spring Boot 系列](spring-boot)
+### [Spring Boot 系列](java/spring-boot)
 
 
 ## 关于作者
