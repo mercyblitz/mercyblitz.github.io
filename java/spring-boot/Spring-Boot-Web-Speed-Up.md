@@ -181,13 +181,6 @@ public class WebMvcAutoConfiguration {
 spring.mvc.formcontent.putfilter.enabled = false
 ````
 
-`spring-boot-web-support` 为了更好地兼容 Spring Boot 低版本，提供新的配置方式：
-
-````properties
-# 激活 com.alibaba.boot.web.filter.NoopOrderedHttpPutFormContentFilter
-web-support.noop.formcontent.putfilter.enabled = true
-````
-
 
 #### `org.springframework.web.filter.HiddenHttpMethodFilter`
 
