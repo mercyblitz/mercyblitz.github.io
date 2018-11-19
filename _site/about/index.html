@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="关于程序、设计以及架构 | 小马哥，Javaer ，Software Engineer">
+    <meta name="keywords"  content="小马哥, mercyblitz, Mercy Ma, 小马哥的博客">
+    <meta name="theme-color" content="#000000">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="About - 小马哥的博客 | mercyblitz Blog">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="你是我的梦想">
+    
+    <meta property="og:image" content="http://localhost:4000/img/avatar-mecyblitz.jpg">
+    <meta property="og:url" content="http://localhost:4000/about/">
+    <meta property="og:site_name" content="小马哥的博客 | mercyblitz Blog">
+    
+    <title>About - 小马哥的博客 | mercyblitz Blog</title>
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/pwa/manifest.json">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="http://localhost:4000/about/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Mercy Ma</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li>
+                        <a href="/about/">About</a>
+                    </li>
+                    
+                    
+                    
+                    <li>
+                        <a href="/archive/">Archive</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a href="/portfolio/">Portfolio</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    var __HuxNav__ = {
+        close: function(){
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        },
+        open: function(){
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+
+    // Bind Event
+    $toggle.addEventListener('click', function(e){
+        if ($navbar.className.indexOf('in') > 0) {
+            __HuxNav__.close()
+        }else{
+            __HuxNav__.open()
+        }
+    })
+
+    /**
+     * Since Fastclick is used to delegate 'touchstart' globally
+     * to hack 300ms delay in iOS by performing a fake 'click',
+     * Using 'e.stopPropagation' to stop 'touchstart' event from 
+     * $toggle/$collapse will break global delegation.
+     * 
+     * Instead, we use a 'e.target' filter to prevent handler
+     * added to document close HuxNav.  
+     *
+     * Also, we use 'click' instead of 'touchstart' as compromise
+     */
+    document.addEventListener('click', function(e){
+        if(e.target == $toggle) return;
+        if(e.target.className == 'icon-bar') return;
+        __HuxNav__.close();
+    })
+</script>
+
+
+    <!-- Page Header -->
+
+
+
+
+
+
+
+<header class="intro-header" style="background-image: url('/img/about-bg.jpg')">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        
+        <div class="site-heading">
+        
+          <h1>About</h1>
+          <span class="subheading">你是我的梦想</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<!-- Main Content -->
+<div class="container">
+	<div class="row">
+        
+
+<!-- USE SIDEBAR -->
+    <!-- PostList Container -->
+    		<div class="
+                col-lg-8 col-lg-offset-1
+                col-md-8 col-md-offset-1
+                col-sm-12
+                col-xs-12
+                postlist-container
+            ">
+    			<!-- Language Selector -->
+<select class="sel-lang" onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
+    <option value="0" selected> 中文 Chinese </option>
+    <option value="1"> 英文 English </option>
+</select>
+
+<!-- Chinese Version -->
+<div class="zh post-container">
+    
+    <blockquote>
+  <p>手淫互联网，意淫大数据</p>
+</blockquote>
+
+<p>大家好，我是小马哥，<a href="https://www.douyu.com/mercyblitz">Java 劝退师</a>，<a href="https://dubbo.apache.org/">Apache Dubbo</a> PPMC、<a href="https://github.com/spring-cloud-incubator/spring-cloud-alibaba">Spring Cloud Alibaba</a> 项目架构师。目前主要负责集团中间件开源项目、微服务技术实施、架构衍进、基础设施构建等。通过 SUN Java（SCJP、SCWCD、SCBCD）以及 Oracle OCA 等的认证。</p>
+
+<ul>
+  <li>微信：mercyblitz</li>
+  <li>微信公众号：次灵均阁</li>
+  <li><a href="https://weibo.com/mercyblitz">微博</a>：@mercyblitz</li>
+  <li><a href="http://github.com/mercyblitz">Github</a>：http://github.com/mercyblitz</li>
+  <li><a href="https://twitter.com/mercyblitz">Twitter</a>：@mercyblitz</li>
+</ul>
+
+<h2 id="著书">著书</h2>
+
+<ul>
+  <li>《Spring Boot 编程思想》（即将发行）</li>
+</ul>
+
+<h2 id="线上课程">线上课程</h2>
+
+<ul>
+  <li>慕课网
+    <ul>
+      <li><a href="https://coding.imooc.com/class/252.html">Spring Boot 2.0深度实践之核心技术篇</a></li>
+      <li>Spring Boot 2.0深度实践之生态整合篇（即将上线…）</li>
+    </ul>
+  </li>
+  <li>SegmentFault
+    <ul>
+      <li><a href="https://segmentfault.com/ls/1650000011387052">Java 微服务实践 - Spring Boot / Spring Cloud</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="开源项目">开源项目</h2>
+
+<ul>
+  <li>Spring Cloud
+    <ul>
+      <li><a href="https://github.com/spring-cloud-incubator/spring-cloud-alibaba">Spring Cloud Alibaba</a></li>
+    </ul>
+  </li>
+  <li>Apache
+    <ul>
+      <li><a href="https://github.com/apache/incubator-dubbo">Apache Dubbo</a></li>
+      <li><a href="https://github.com/apache/incubator-dubbo-spring-boot-project">Apache Dubbo Spring Boot</a></li>
+    </ul>
+  </li>
+  <li>Alibaba
+    <ul>
+      <li><a href="https://github.com/alibaba/nacos">Alibaba Nacos</a>
+        <ul>
+          <li><a href="https://github.com/nacos-group/nacos-spring-project">Nacos Spring</a></li>
+          <li><a href="https://github.com/nacos-group/nacos-spring-boot-project">Nacos Spring Boot</a></li>
+        </ul>
+      </li>
+      <li><a href="https://github.com/alibaba/Sentinel">Alibaba Sentinel</a></li>
+      <li><a href="https://github.com/alibaba/velocity-spring-boot-project">Velocity Spring Boot Starter</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="分享">分享</h2>
+
+<ul>
+  <li>Spring Cloud Alibaba 致力于提供分布式应用开发的一站式解决方法 · <a href="http://cncc2018.ccf.org.cn/cms/show.action?code=publish_ff80808162f165f90163070bf87105de&amp;siteid=100000&amp;channelid=0000000002">CNCC 2018</a></li>
+  <li>Dubbo Cloud Native 之路的实践与思考 · <a href="https://www.itdks.com/eventlist/detail/2307">Dubbo开发者沙龙（上海站）- 2018 Aliware技术行</a></li>
+  <li>Dubbo 的过去、现在以及未来 · <a href="http://2017.thegiac.com/">2017 国际互联网大会（上海）</a></li>
+  <li>微服务实践之路（二） · <a href="https://segmentfault.com/sfdc-2016/hz">2016 SegmentFault 开发者大（杭州站）</a></li>
+  <li>微服务实践之路（一） · <a href="https://www.bagevent.com/event/227489">2016 厦门互联网技术峰会</a></li>
+</ul>
+
+</div>
+
+<!-- English Version -->
+<div class="en post-container">
+    
+    
+<blockquote>
+  <p>Hard Code in Internet，Think Big Data too much</p>
+</blockquote>
+
+<p>Hi, I’m Mercy Ma, as a member in <a href="https://dubbo.apache.org/">Apache Dubbo</a> PPMC, an achitecture of <a href="https://github.com/spring-cloud-incubator/spring-cloud-alibaba">Spring Cloud Alibaba</a>, and working on Open Source projects and Micro Services infrastructure, certificated SUN Java（SCJP、SCWCD、SCBCD）, Oracle OCA and so on.</p>
+
+<h2 id="books">Books</h2>
+
+<ul>
+  <li>《Thinking in Spring Boot》（Chinese）</li>
+</ul>
+
+<h2 id="online-courses">Online Courses</h2>
+
+<ul>
+  <li>imooc
+    <ul>
+      <li><a href="https://coding.imooc.com/class/252.html">Spring Boot 2.0深度实践之核心技术篇</a></li>
+      <li>Spring Boot 2.0深度实践之生态整合篇（即将上线…）</li>
+    </ul>
+  </li>
+  <li>SegmentFault
+    <ul>
+      <li><a href="https://segmentfault.com/ls/1650000011387052">Java 微服务实践 - Spring Boot / Spring Cloud</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="open-source-projects">Open Source Projects</h2>
+
+<ul>
+  <li>Spring Cloud
+    <ul>
+      <li><a href="https://github.com/spring-cloud-incubator/spring-cloud-alibaba">Spring Cloud Alibaba</a></li>
+    </ul>
+  </li>
+  <li>Apache
+    <ul>
+      <li><a href="https://github.com/apache/incubator-dubbo">Apache Dubbo</a></li>
+      <li><a href="https://github.com/apache/incubator-dubbo-spring-boot-project">Apache Dubbo Spring Boot</a></li>
+    </ul>
+  </li>
+  <li>Alibaba
+    <ul>
+      <li><a href="https://github.com/alibaba/nacos">Alibaba Nacos</a>
+        <ul>
+          <li><a href="https://github.com/nacos-group/nacos-spring-project">Nacos Spring</a></li>
+          <li><a href="https://github.com/nacos-group/nacos-spring-boot-project">Nacos Spring Boot</a></li>
+        </ul>
+      </li>
+      <li><a href="https://github.com/alibaba/Sentinel">Alibaba Sentinel</a></li>
+      <li><a href="https://github.com/alibaba/velocity-spring-boot-project">Velocity Spring Boot Starter</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="talks">Talks</h2>
+
+<ul>
+  <li>Spring Cloud Alibaba 致力于提供分布式应用开发的一站式解决方法 · <a href="http://cncc2018.ccf.org.cn/cms/show.action?code=publish_ff80808162f165f90163070bf87105de&amp;siteid=100000&amp;channelid=0000000002">CNCC 2018</a></li>
+  <li>Dubbo Cloud Native 之路的实践与思考 · <a href="https://www.itdks.com/eventlist/detail/2307">Dubbo开发者沙龙（上海站）- 2018 Aliware技术行</a></li>
+  <li>Dubbo 的过去、现在以及未来 · <a href="http://2017.thegiac.com/">2017 国际互联网大会（上海）</a></li>
+  <li>微服务实践之路（二） · <a href="https://segmentfault.com/sfdc-2016/hz">2016 SegmentFault 开发者大（杭州站）</a></li>
+  <li>微服务实践之路（一） · <a href="https://www.bagevent.com/event/227489">2016 厦门互联网技术峰会</a></li>
+</ul>
+
+</div>
+
+
+
+<!-- disqus 评论框 start -->
+<div class="comment">
+    <div id="disqus_thread" class="disqus-thread">
+
+    </div>
+</div>
+<!-- disqus 评论框 end -->
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "mercyblitz";
+    var disqus_identifier = "mercyblitz//about/";
+    var disqus_url = "http://localhost:4000/about/";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus 公共JS代码 end -->
+
+
+    		</div>
+    <!-- Sidebar Container -->
+            <div class="
+                col-lg-3 col-lg-offset-0
+                col-md-3 col-md-offset-0
+                col-sm-12
+                col-xs-12
+                sidebar-container
+            ">
+                <!-- Featured Tags -->
+                
+
+
+<section>
+    
+    <h5><a href="/archive/">FEATURED TAGS</a></h5>
+    <div class="tags">
+        
+        
+        
+        
+        
+    </div>
+</section>
+
+
+                <!-- Short About -->
+                <section class="visible-md visible-lg">
+  <hr>
+  <h5><a href="/about/">ABOUT ME</a></h5>
+  <div class="short-about">
+    
+    <img src="/img/avatar-mecyblitz.jpg" />
+    
+    
+    <p>手淫互联网，意淫大数据</p>
+    
+    <!-- SNS Link -->
+    
+
+
+<ul class="list-inline">
+
+
+  
+  <li>
+    <a href="/feed.xml">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+  <li>
+    <a href="https://twitter.com/mercyblitz">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+  
+  <li>
+    <a target="_blank" href="http://weibo.com/mercyblitz">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+  
+  <li>
+    <a target="_blank" href="https://github.com/mercyblitz">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+</ul>
+  </div>
+</section>
+
+                <!-- Friends Blog -->
+                
+<hr>
+<h5>FRIENDS</h5>
+<ul class="list-inline">
+  
+  <li><a href=""></a></li>
+  
+</ul>
+
+    		</div>
+        
+	</div>
+</div>
+
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- SNS Link -->
+                
+
+
+<ul class="list-inline text-center">
+
+
+  
+  <li>
+    <a href="/feed.xml">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+  <li>
+    <a href="https://twitter.com/mercyblitz">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+  
+  <li>
+    <a target="_blank" href="http://weibo.com/mercyblitz">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+  
+  <li>
+    <a target="_blank" href="https://github.com/mercyblitz">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+</ul>
+
+                <p class="copyright text-muted">
+                    Copyright &copy; Mercy Ma 2018
+                    <br>
+                    Powered by <a href="http://huangxuan.me">Hux Blog</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=huxpro&repo=huxpro.github.io&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<!-- Currently, only navbar scroll-down effect at desktop still depends on this -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js "></script>
+
+<!-- Service Worker -->
+
+<script src="/js/snackbar.js "></script>
+<script src="/js/sw-registration.js "></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!--
+     Because of the native support for backtick-style fenced code blocks
+     right within the Markdown is landed in Github Pages,
+     From V1.6, There is no need for Highlight.js,
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/
+     - https://github.com/jneen/rouge/wiki/list-of-supported-languages-and-lexers
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+
+
+
+<!--fastClick.js -->
+<script>
+    async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+
+<!-- Side Catalog -->
+
+
+
+<!-- Multi-Lingual -->
+
+<!-- Handle Language Change -->
+<script type="text/javascript">
+    // get nodes
+    var $zh = document.querySelector(".zh");
+    var $en = document.querySelector(".en");
+    var $select = document.querySelector("select");
+
+    // bind hashchange event
+    // Changes at v1.7.2: change the language flag from hash-basing to in-memory basing
+    // due to its confliction with catalog anchors.
+    // window.addEventListener('hashchange', _render);
+
+    // handle render
+    function _render(_hash){
+        var _hash = _hash || window.location.hash;
+        // en
+        if(_hash == "#en"){
+            $select.selectedIndex = 1;
+            $en.style.display = "block";
+            $en.classList.add("active");
+            $zh.style.display = "none";
+            $zh.classList.remove("active");
+        // zh by default
+        }else{
+            // not trigger onChange, otherwise cause a loop call.
+            $select.selectedIndex = 0;
+            $zh.style.display = "block";
+            $zh.classList.add("active");
+            $en.style.display = "none";
+            $en.classList.remove("active");
+        }
+        // interop with catalog 
+        if ("") generateCatalog(".catalog-body");
+    }
+
+    // handle select change
+    function onLanChange(index){
+        if(index == 0){
+            _hash = "#zh"
+        }else{
+            _hash = "#en"
+        }
+        _render(_hash)
+    }
+
+    // init
+    _render();
+</script>
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>

@@ -58,7 +58,7 @@ kramdown:
 
 
 # Disqus settings
-disqus_username: hux
+disqus_username: mercyblitz
 
 # Netease settings
 netease_comment: false
@@ -77,7 +77,7 @@ netease_comment: false
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "For the next quantum leap<br>离开世界之前，一切都是过程"
+sidebar-about-description: "大家好，我是小马哥"
 sidebar-avatar: /img/avatar-mecyblitz.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 

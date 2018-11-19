@@ -1,31 +1,47 @@
-> 写写代码，做做设计，  
-> 离开世界之前，一切都是过程。
+> 手淫互联网，意淫大数据
 
-Hey，我是黄玄，病毒种，进化程度不明，多出没于[博客](https://huangxuan.me)、[微博](weibo.com/huxpro)、[知乎](https://www.zhihu.com/people/huxpro/pins/posts)、[Twitter](https://twitter.com/Huxpro/)、[Github](http://github.com/huxpro)、[Medium](https://medium.com/@Huxpro) 等地带，绝招尚在开发中。
+大家好，我是小马哥，[Java 劝退师](https://www.douyu.com/mercyblitz)，[Apache Dubbo](https://dubbo.apache.org/) PPMC、[Spring Cloud Alibaba](https://github.com/spring-cloud-incubator/spring-cloud-alibaba) 项目架构师。目前主要负责集团中间件开源项目、微服务技术实施、架构衍进、基础设施构建等。通过 SUN Java（SCJP、SCWCD、SCBCD）以及 Oracle OCA 等的认证。
 
-职业是软件工程师，[Web 工会](https://medium.com/ben-and-dion/team-web-3315aa447fb2#.359a9c6cl)活跃成员。目前在 [Facebook](https://www.facebook.com/) 写 [Reason](https://reasonml.github.io/) 与 [Messenger.com](http://messenger.com/) ，曾被招募为淘宝网 · [阿里旅行](http://alitrip.com)前端工程师、微影时代 · [微票儿](http://www.wepiao.com/?r=movie)前端基础工程团队负责人、[饿了么](https://ele.me/) · 大前端团队 · [PWA 顾问](https://medium.com/elemefe/upgrading-ele-me-to-progressive-web-app-2a446832e509)。
+- 微信：mercyblitz
+- 微信公众号：次灵均阁
+- [微博](https://weibo.com/mercyblitz)：@mercyblitz
+- [Github](http://github.com/mercyblitz)：http://github.com/mercyblitz
+- [Twitter](https://twitter.com/mercyblitz)：@mercyblitz
 
-一些作品和开源软件项目，👉 戳 [Portfolio](/portfolio)、[Github](http://github.com/huxpro)、[演说.io](https://zhuanlan.zhihu.com/p/21280918)。 
+
+## 著书
+
+- 《Spring Boot 编程思想》（即将发行）
 
 
-##### Talks
+## 线上课程
 
-- [Upgrading to Progressive Web Apps][9] · [JSConf CN 上海 2017](http://2017.jsconf.cn/)
-- Building Progressive Web Apps · [CSDI 广州 2017](http://www.csdisummit.com/)
-- The State of Progressive Web App · GDG IO Redux 北京 2017
-- 炒冷饭 · PWA 到底是个什么玩意？· Baidu HQ 北京 2017
-- [Service Worker 101][5] · GDG DevFest 北京 2016
-- [Progressive Web App，复兴序章][4] · [QCon 上海 2016](http://2016.qconshanghai.com/presentation/3111)
-- Progressive Web App 之我见 · GDG IO Redux 北京 2016
-- [CSS Still Sucks 2015][2] · 2015
-- [JavaScript 模块化七日谈][1] · 2015
+- 慕课网
+    - [Spring Boot 2.0深度实践之核心技术篇](https://coding.imooc.com/class/252.html)
+    - Spring Boot 2.0深度实践之生态整合篇（即将上线...）
+- SegmentFault
+    - [Java 微服务实践 - Spring Boot / Spring Cloud](https://segmentfault.com/ls/1650000011387052)
 
-[1]: //huangxuan.me/2015/07/09/js-module-7day/
-[2]: //huangxuan.me/2015/12/28/css-sucks-2015/
-[3]: //huangxuan.me/2016/06/05/pwa-in-my-pov/
-[4]: //huangxuan.me/2016/10/20/pwa-qcon2016/
-[5]: //huangxuan.me/2016/11/20/sw-101-gdgdf/
-[6]: https://yanshuo.io/assets/player/?deck=58ac8598b123db0067292f92 "PWA Rehashing"
-[7]: https://yanshuo.io/assets/player/?deck=593ad6fbfe88c2006a0a0d6d "The State of PWA"
-[8]: https://yanshuo.io/assets/player/?deck=594d673d570c357d0698a950 "Building PWA"
-[9]: //huangxuan.me/jsconfcn2017/
+
+## 开源项目
+
+- Spring Cloud
+  - [Spring Cloud Alibaba](https://github.com/spring-cloud-incubator/spring-cloud-alibaba)
+- Apache
+    - [Apache Dubbo](https://github.com/apache/incubator-dubbo)
+    - [Apache Dubbo Spring Boot](https://github.com/apache/incubator-dubbo-spring-boot-project) 
+- Alibaba
+    - [Alibaba Nacos](https://github.com/alibaba/nacos)
+        - [Nacos Spring](https://github.com/nacos-group/nacos-spring-project)
+        - [Nacos Spring Boot](https://github.com/nacos-group/nacos-spring-boot-project)
+    - [Alibaba Sentinel](https://github.com/alibaba/Sentinel)
+    - [Velocity Spring Boot Starter](https://github.com/alibaba/velocity-spring-boot-project)
+
+
+## 分享
+
+- Spring Cloud Alibaba 致力于提供分布式应用开发的一站式解决方法 · [CNCC 2018](http://cncc2018.ccf.org.cn/cms/show.action?code=publish_ff80808162f165f90163070bf87105de&siteid=100000&channelid=0000000002)
+- Dubbo Cloud Native 之路的实践与思考 · [Dubbo开发者沙龙（上海站）- 2018 Aliware技术行](https://www.itdks.com/eventlist/detail/2307)
+- Dubbo 的过去、现在以及未来 · [2017 国际互联网大会（上海）](http://2017.thegiac.com/)
+- 微服务实践之路（二） · [2016 SegmentFault 开发者大（杭州站）](https://segmentfault.com/sfdc-2016/hz)
+- 微服务实践之路（一） · [2016 厦门互联网技术峰会](https://www.bagevent.com/event/227489)
