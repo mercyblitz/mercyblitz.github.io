@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Mercy Ma</title>
+    <title>小马哥的技术博客</title>
     <description>关于程序、设计以及架构 | 小马哥，Javaer ，Software Engineer</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 20 Nov 2018 06:38:38 +0800</pubDate>
-    <lastBuildDate>Tue, 20 Nov 2018 06:38:38 +0800</lastBuildDate>
+    <pubDate>Tue, 20 Nov 2018 09:18:23 +0800</pubDate>
+    <lastBuildDate>Tue, 20 Nov 2018 09:18:23 +0800</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>

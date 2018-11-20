@@ -1,12 +1,15 @@
 # Site settings
-title: Mercy Ma
-SEOTitle: 小马哥的博客 | mercyblitz Blog
+title: 小马哥的技术博客
+SEOTitle: 小马哥的技术博客 | mercyblitz Blog
 header-img: img/home-bg.jpg
 email: mercyblitz@gmail.com
 description: "关于程序、设计以及架构 | 小马哥，Javaer ，Software Engineer"
-keyword: "小马哥, mercyblitz, Mercy Ma, 小马哥的博客"
+keyword: "小马哥, mercyblitz, Mercy Ma, 小马哥的技术博客"
 url: "https://weibo.com/mercyblitz"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
+
+post:
+  author: mercyblitz
 
 # Publish posts or collection documents with a future date.
 future: true
