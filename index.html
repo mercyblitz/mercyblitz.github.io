@@ -1,5 +1,7 @@
 ---
 layout: page
+title: 小马哥的技术博客
+author: mercyblitz
 description: "这里将深入探讨相关技术，包括行业动态，架构设计，设计模式，框架使用，源码分析等。 :)"
 ---
 
@@ -23,7 +25,7 @@ description: "这里将深入探讨相关技术，包括行业动态，架构设
         </div>
     </a>
     <p class="post-meta">
-        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.post.author }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
+        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
     </p>
 </div>
 <hr>
