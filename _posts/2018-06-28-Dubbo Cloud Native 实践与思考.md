@@ -7,7 +7,7 @@
     - [自我介绍](#%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D)
     - [主要议程](#%E4%B8%BB%E8%A6%81%E8%AE%AE%E7%A8%8B)
         - [Cloud Native 基础设施](#cloud-native-%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD)
-            - [服务发现（Service Discovery ）](#%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0%EF%BC%88service-discovery-%EF%BC%89)
+            - [服务发现（Service Discovery ）](#%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0service-discovery)
                 - [如何选择](#%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9)
                     - [Eureka](#eureka)
                     - [Consul](#consul)
@@ -23,10 +23,10 @@
             - [Spring Cloud 架构体系](#spring-cloud-%E6%9E%B6%E6%9E%84%E4%BD%93%E7%B3%BB)
             - [Dubbo 架构体系](#dubbo-%E6%9E%B6%E6%9E%84%E4%BD%93%E7%B3%BB)
         - [Dubbo Cloud Native 准备](#dubbo-cloud-native-%E5%87%86%E5%A4%87)
-            - [Dubbo 注解驱动（Annotation-Driven）](#dubbo-%E6%B3%A8%E8%A7%A3%E9%A9%B1%E5%8A%A8%EF%BC%88annotation-driven%EF%BC%89)
+            - [Dubbo 注解驱动（Annotation-Driven）](#dubbo-%E6%B3%A8%E8%A7%A3%E9%A9%B1%E5%8A%A8annotation-driven)
                 - [`@DubboComponentScan` 服务端示例](#dubbocomponentscan-%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%A4%BA%E4%BE%8B)
                 - [`@DubboComponentScan` 客户端示例](#dubbocomponentscan-%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%A4%BA%E4%BE%8B)
-            - [Dubbo 外部化配置（Externalized Configuration）](#dubbo-%E5%A4%96%E9%83%A8%E5%8C%96%E9%85%8D%E7%BD%AE%EF%BC%88externalized-configuration%EF%BC%89)
+            - [Dubbo 外部化配置（Externalized Configuration）](#dubbo-%E5%A4%96%E9%83%A8%E5%8C%96%E9%85%8D%E7%BD%AEexternalized-configuration)
         - [现场演示环节](#%E7%8E%B0%E5%9C%BA%E6%BC%94%E7%A4%BA%E7%8E%AF%E8%8A%82)
             - [Dubbo 整合 Hystrix 示例](#dubbo-%E6%95%B4%E5%90%88-hystrix-%E7%A4%BA%E4%BE%8B)
                 - [Dubbo 客户端实现](#dubbo-%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%AE%9E%E7%8E%B0)
@@ -71,7 +71,7 @@ Cloud Native 应用架构随着云技术的发展受到业界特别重视和关�
 
 相对于其他学术流派，CNCF 的 Cloud Native 定义更为具体，偏向于软件技术。这一点我们从文中的一些关键字能够明显地体会到，如关键字 "Containers（容器）"、"service meshes"、”microservices（微服务）“等。通常，开发人员较为关注的 Cloud Native 基础设施为：“服务发现”、“负载均衡”、“服务网关”、“分布式配置”、“服务熔断”以及“跟踪监控”，如图所示：
 
-![幻灯片05](assets/幻灯片05.jpg)
+![幻灯片05](/img/assets/幻灯片05.jpg)
 
 由于 PPT 格式的限制，此处我将“链路跟踪”与“服务监控” 并陈为“跟踪监控”。接下来，我们进入“服务发现”的讨论。
 
@@ -83,7 +83,7 @@ Cloud Native 应用架构随着云技术的发展受到业界特别重视和关�
 
 随着微服务架构（MSA）受到不同规模企业的青睐，服务治理的实施逐渐被提上基础设施改造的议程。尽管这些概念在 SOA 时代已经提出，然而引起业界广泛关注应归功于微服务。服务发现（Service Discovery ）作为服务治理的核心特性，通常也将服务注册（Service Registration）一并讨论。无论是服务发现，还是服务注册，在具体落地实施时，它们必须面对技术选型的问题。在座的各位，包括我，大多数是 Java 程序员，自然关心 Java 的技术方案。目前，Java 社区最为津津乐道的方案莫过于 Spring Cloud，搭配 Netflix OSS 组件 Eureka，帮助 Spring Boot 应用快速搭建服务发现体系。其中，Eureka Server 作为注册中心服务器，Spring Boot 应用整合 Eureka Client 向 Eureka Server 注册。实际上，Spring Cloud 除了整合 Netflix Eureka 作为服务发现之外，还提供了 Apache Zookeeper 和 HachiCorp Consul 的实现，所以这三种方案出现在当前页面：
 
-![幻灯片06](assets/幻灯片06.jpg)
+![幻灯片06](/img/assets/幻灯片06.jpg)
 
 
 
@@ -117,17 +117,17 @@ Cloud Native 应用架构随着云技术的发展受到业界特别重视和关�
 
 ###### Consul
 
-Consul 同样作为 Spring Cloud 服务中心，基于 GO 语言开发，其数据一致性采用 Raft 算法，低内存，集群支持。曾一度成为我理想的替换 Eureka 的方案，不过本人并不具备 Consul 的大规模运用，为此还特意请教永辉云创的架构师翟永超（《Spring Cloud 微服务实战》的作者）。他告知 Consul 表现不错，并在跨 DC（数据中心）方面也比较稳定：![image-20180627210416358](assets/image-20180627210416358.png)
+Consul 同样作为 Spring Cloud 服务中心，基于 GO 语言开发，其数据一致性采用 Raft 算法，低内存，集群支持。曾一度成为我理想的替换 Eureka 的方案，不过本人并不具备 Consul 的大规模运用，为此还特意请教永辉云创的架构师翟永超（《Spring Cloud 微服务实战》的作者）。他告知 Consul 表现不错，并在跨 DC（数据中心）方面也比较稳定：![image-20180627210416358](/img/assets/image-20180627210416358.png)
 
 他的答复让我增强了 Consul 的信心，稍显遗憾的是其 Consul 应用节点略少。后来，我听说 B 站的哥们自研服务发现中间件 **[discovery](https://github.com/Bilibili/discovery/)**，他们应该也对 Consul 做过调研和评估，他们的看法是：
 
-![image-20180627210529749](assets/image-20180627210529749.png)
+![image-20180627210529749](/img/assets/image-20180627210529749.png)
 
 > Github 开源地址：https://github.com/Bilibili/discovery/
 >
 > **[discovery](https://github.com/Bilibili/discovery/)** 在 B 站 K8S 上的使用情况：
 >
-> ![image-20180627210509857](assets/image-20180627210509857.png)
+> ![image-20180627210509857](/img/assets/image-20180627210509857.png)
 
 综合两家公司的评估，尽管没有经过本人实际操作，并且两者没有提供具体的数据指标，然而在一定程度上说明 Consul 作为注册中心的实例节点规模大概在 2k 以内。换言之，它比较适合中小型企业。
 
@@ -143,7 +143,7 @@ Zookeeper 即可是 Spring Cloud 注册中心，又能作为 Dubbo 注册中心�
 
 #### 负载均衡
 
-![幻灯片07](assets/幻灯片07.jpg)
+![幻灯片07](/img/assets/幻灯片07.jpg)
 
 负载均衡是第二个重要 Cloud Native 基础设施，熟悉 Spring Cloud 的朋友一定对右侧的蝴蝶结有印象，它就是 Netflix OSS 负载均衡组件 Ribbon，框架层面提供了多种负载均衡规则，如：
 
@@ -159,7 +159,7 @@ Zookeeper 即可是 Spring Cloud 注册中心，又能作为 Dubbo 注册中心�
 
 #### 服务网关
 
-![幻灯片08](assets/幻灯片08.jpg)
+![幻灯片08](/img/assets/幻灯片08.jpg)
 
 谈及服务网关，Java 工程师最容易想到的是 Spring Cloud Zuul。Zuul 是 Netflix 基于 Servlet API 开发的 Web 服务代理组件，在 Spring Cloud 使用场景中，它与 Eureka  和 Ribbon 整合，打造具备服务动态更新和负载均衡能力的服务网关。
 
@@ -195,7 +195,7 @@ Zookeeper 即可是 Spring Cloud 注册中心，又能作为 Dubbo 注册中心�
 
 #### 分布式配置
 
-![幻灯片09](assets/幻灯片09.jpg)
+![幻灯片09](/img/assets/幻灯片09.jpg)
 
 左边和中间的四种技术均为 Spring Cloud 分布式配置的底层存储，其中 Git 为版本式配置，而 JDBC 是从 Spring Cloud Edgware 版本开始支持，提供更为通用和动态的配置源。这里我们又见到 Zookeeper 的声影，从简化运维的角度，可以利用 Zookeeper 即承担服务发现，也作为分布式配置的基础设施。而最右边的 etcd 是最近非常火的 Kubernetes 分布式配置的 key-value 存储，提供快速、简单、安全和可高的解决方案。
 
@@ -205,7 +205,7 @@ Zookeeper 即可是 Spring Cloud 注册中心，又能作为 Dubbo 注册中心�
 
 #### 服务熔断
 
-![幻灯片10](assets/幻灯片10.jpg)
+![幻灯片10](/img/assets/幻灯片10.jpg)
 
 服务熔断也非常让开发人员联想到 Spring Cloud Hystrix 技术，不过 Hystrix 并非与 Spring Cloud 强耦合，当然 Dubbo 也能结合 Netflix Hystrix 框架提供服务熔断的能力，后面部分将介绍 Dubbo 与 Hystrix 整合，提升 Dubbo 服务熔断的能力。确切地说，Dubbo 所提供的能力是集群容错，包括 Failover 等模式。 Kong 也天然地支持服务熔断的能力，所以它作为 API 网关的特性是全面的。
 
@@ -215,7 +215,7 @@ Zookeeper 即可是 Spring Cloud 注册中心，又能作为 Dubbo 注册中心�
 
 #### 链路跟踪
 
-![幻灯片11](assets/幻灯片11.jpg)
+![幻灯片11](/img/assets/幻灯片11.jpg)
 
 以上链路跟踪的基础设施从左至右，分别为 Zipkin、OpenTracing 以及 Jaeger，三者的灵感均来自于 [Google 论文 Dapper](https://ai.google/research/pubs/pub36356)。相对而言，Java 程序员可能更为熟悉 Zipkin，因为它是 Spring Cloud Sleuth 首选方案，提供客户端上报以及服务端聚合和 Dashboard 等功能。而 OpenTracing 和 Jaeger 是 CNCF 孵化项目，前者属于开放的标准，提供多语言的适配实现，后者则由 Uber（优步）公司开发并开源的链路跟踪项目，功能上与 Zipkin 类似，不过它基于 GO 语言开发，同时也提供 Java 客户端。
 > OpenTracing 官网：http://opentracing.io/
@@ -227,7 +227,7 @@ Zookeeper 即可是 Spring Cloud 注册中心，又能作为 Dubbo 注册中心�
 
 #### 服务监控 
 
-![幻灯片12](assets/幻灯片12.jpg)
+![幻灯片12](/img/assets/幻灯片12.jpg)
 
 服务监控与链路跟踪有所区别，主要用于监控应用系统或业务的指标数据，可能是健康阈值，如 CPU 或 内存使用率，也可以是业务指标，如最近一小时的用户登录量。通常采用 Metrics 方式暴露，可使用客户端推送或服务端拉取的方式传输 Metrics 信息到数据中心。通常 Metrics 数据与时间是存在对应关系，因此，基本上采用时序型数据库来存储，如图中的 OpenTSDB。通常，Java 微服务应用会选择 Spring Boot 框架作为基础设施，如我之前设计的监控架构就采用了 Spring Boot + OpenTSDB ，后端存储基于 HBase。当时 Spring Boot Actuator Metrics 仅为简单的 Key Value 形式，自然 OpenTSDB 是理想的选择。随着 Spring Boot 2.0 开始支持 [Micrometer](https://micrometer.io/) 之后，使得 Spring Boot 的应用能够整合更多的 Micrometer 适配方案，其中名气较大的就是图中间的 [Prometheus](https://prometheus.io/)，它同样也是 CNCF 的孵化项目。
 
@@ -244,7 +244,7 @@ Zookeeper 即可是 Spring Cloud 注册中心，又能作为 Dubbo 注册中心�
 
 #### CNCF 架构体系
 
-![CNCF](assets/CNCF.png)
+![CNCF](/img/assets/CNCF.png)
 
 CNCF 体系作为目前最热门的架构选型之一，基本上围绕着 Kubernetes 为中心而构建。个人认为，Java 业界和 CNCF 体系并没有达成共识，如服务网关，CNCF 主打 Envoy，而 Java 主要的方案为 Zuul 和 Spring Cloud Gateway。因此，个人建议是密切的关注 CNCF 的发展，不过个别孵化项目可以先行，如 Prometheus 和 Jaeger 等。 至于 CNCF 与 Java 生态的整合和落地，还得有待时日。
 
@@ -254,7 +254,7 @@ CNCF 体系作为目前最热门的架构选型之一，基本上围绕着 Kuber
 
 #### Spring Cloud 架构体系
 
-![Spring Cloud](assets/Spring-Cloud.png)
+![Spring Cloud](/img/assets/Spring-Cloud.png)
 
 实际上，这个图片并非 Spring Cloud 组件架构，而是将其整合在 Pivotal Cloud Foundry (PCF) 架构中。基本上，Spring Cloud 功能组件均有所体现，包括 Eureka、Hystrix、Ribbon 等。不过值得注意的是，Spring Cloud Stream 是一套较为完整和抽象的流式编程框架，屏蔽了底层传输介质（不仅是消息服务），如 Kafka、RabbitMQ 等。除此之外，其他的组件可圈可点，如 Eureka 在大规模运用中的卡顿问题、Ribbon 缺少权重、Zuul 连接数限制和资源消耗、服务调用受限于 Feign REST 协议限制等。如果在小规模场景使用，以上限制或问题不明显，可以说 Spring Cloud 完全能够适任。
 
@@ -267,7 +267,7 @@ CNCF 体系作为目前最热门的架构选型之一，基本上围绕着 Kuber
 
 #### Dubbo 架构体系
 
-![Dubbo.png](assets/Dubbo.png)
+![Dubbo.png](/img/assets/Dubbo.png)
 
 编程模型方面，不但支持传统的 Spring XML 配合方式，已经实现注解驱动以及外部化配置，并且全面支持最新的 Spring Boot 2.0，在不久的未来，大家会看到 Dubbo 与 Spring Cloud 的整合，使开发人员无缝地衔接已有的 Spring Cloud 应用。
 > Dubbo Spring Boot 项目地址：https://github.com/apache/incubator-dubbo-spring-boot-project
@@ -288,7 +288,7 @@ CNCF 体系作为目前最热门的架构选型之一，基本上围绕着 Kuber
 
 ### Dubbo Cloud Native 准备
 
-![幻灯片16](assets/幻灯片16.jpg)
+![幻灯片16](/img/assets/幻灯片16.jpg)
 
 在 Dubbo 架构体系时，我们曾提到编程模型的变化。从 Dubbo `2.5.8` 开始，注解驱动和外部化配置均已得到支持。同时，Dubbo 已经合并 Dubbox 代码，Java JAX-RS 标准得到了支持，目前业界事实的 REST 标准 Spring Web MVC 正在同步开发。Reactive 的支持也在同步进行，小马哥还得友好地提醒一下各位，对于 Reactive 的期望不应该过分的关注性能的提升。
 
