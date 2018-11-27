@@ -21,15 +21,17 @@
             <div class="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="{{ site.baseurl }}/">Home</a>
+                        <a href="{{ site.baseurl }}/">首页</a>
                     </li>
-                    {% for page in site.pages %}
-                    {% if page.title and page.hide-in-nav != true %}
                     <li>
-                        <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+                        <a href="{{ site.baseurl }}/about/">关于我</a>
                     </li>
-                    {% endif %}
-                    {% endfor %}
+                    <li>
+                        <a href="{{ site.baseurl }}/archive/">归档文章</a>
+                    </li>
+                    <li>
+                        <a href="{{ site.baseurl }}/books/thinking-in-spring-boot/">《Spring Boot 编程思想》</a>
+                    </li>
                 </ul>
             </div>
         </div>
