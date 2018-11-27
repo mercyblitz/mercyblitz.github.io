@@ -1,0 +1,318 @@
+<h1 id="spring-boot-web-应用加速">Spring Boot Web 应用加速</h1>
+
+<p>默认情况下，Spring Boot Web 应用会装配一些功能组件 Bean。</p>
+
+<p>在大多数 Web 应用场景下，可以选择性地关闭一下自动装配的Spring 组件 Bean，以达到提升性能的目的。</p>
+
+<h2 id="配置项优化">配置项优化</h2>
+
+<h3 id="spring-boot-web-应用加速-完整配置项">Spring Boot Web 应用加速 完整配置项</h3>
+
+<div class="language-properties highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre></td><td class="rouge-code"><pre><span class="py">management.add-application-context-header</span> <span class="p">=</span> <span class="s">false</span>
+<span class="py">spring.mvc.formcontent.putfilter.enabled</span> <span class="p">=</span> <span class="s">false</span>
+
+<span class="py">spring.autoconfigure.exclude</span> <span class="p">=</span> <span class="s">org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration,</span><span class="se">\
+</span><span class="s">org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration,</span><span class="se">\
+</span><span class="s">org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration,</span><span class="se">\
+</span><span class="s">org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration,</span><span class="se">\
+</span><span class="s">org.springframework.boot.autoconfigure.jdbc.XADataSourceAutoConfiguration,</span><span class="se">\
+</span><span class="s">org.springframework.boot.autoconfigure.jdbc.JndiDataSourceAutoConfiguration,</span><span class="se">\
+</span><span class="s">org.springframework.boot.autoconfigure.transaction.jta.JtaAutoConfiguration,</span><span class="se">\
+</span><span class="s">org.springframework.boot.autoconfigure.websocket.WebSocketAutoConfiguration,</span><span class="se">\
+</span><span class="s">org.springframework.boot.autoconfigure.websocket.WebSocketMessagingAutoConfiguration,</span><span class="se">\
+</span><span class="s">org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration,</span><span class="se">\
+</span><span class="s">org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfiguration,</span><span class="se">\
+</span><span class="s">org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration,</span><span class="se">\
+</span><span class="s">org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration,</span><span class="se">\
+</span><span class="s">org.springframework.boot.autoconfigure.mail.MailSenderValidatorAutoConfiguration,</span><span class="se">\
+</span><span class="s">org.springframework.boot.actuate.autoconfigure.TraceRepositoryAutoConfiguration,</span><span class="se">\
+</span><span class="s">org.springframework.boot.actuate.autoconfigure.TraceWebFilterAutoConfiguration,</span><span class="se">\
+</span><span class="s">org.springframework.boot.actuate.autoconfigure.MetricFilterAutoConfiguration</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="配置项汇总">配置项汇总</h3>
+
+<div class="language-properties highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="py">spring.autoconfigure.exclude</span> <span class="p">=</span> <span class="s">org.springframework.boot.actuate.autoconfigure.TraceRepositoryAutoConfiguration,</span><span class="se">\
+</span><span class="s">org.springframework.boot.actuate.autoconfigure.TraceWebFilterAutoConfiguration,</span><span class="se">\
+</span><span class="s">org.springframework.boot.actuate.autoconfigure.MetricFilterAutoConfiguration</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="关闭-web-请求跟踪-自动装配">关闭 Web 请求跟踪 自动装配</h3>
+
+<h4 id="orgspringframeworkbootactuateautoconfiguretracewebfilterautoconfiguration"><code class="highlighter-rouge">org.springframework.boot.actuate.autoconfigure.TraceWebFilterAutoConfiguration</code></h4>
+
+<p>顾名思义，该自动装配用跟踪 Web 请求，通过Servlet Filter <code class="highlighter-rouge">org.springframework.boot.actuate.trace.WebRequestTraceFilter</code> 记录请求的信息（如：请求方法、请求头以及请求路径等），其计算的过程存在一定的开销，使用场景罕见，故可选择关闭。</p>
+
+<ul>
+  <li>配置项</li>
+</ul>
+
+<div class="language-properties highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="py">spring.autoconfigure.exclude</span> <span class="p">=</span> <span class="s">org.springframework.boot.actuate.autoconfigure.TraceWebFilterAutoConfiguration</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="orgspringframeworkbootactuateautoconfiguretracerepositoryautoconfiguration"><code class="highlighter-rouge">org.springframework.boot.actuate.autoconfigure.TraceRepositoryAutoConfiguration</code></h4>
+
+<p>当<code class="highlighter-rouge">org.springframework.boot.actuate.autoconfigure.TraceWebFilterAutoConfiguration</code>关闭后，其请求信息存储介质<code class="highlighter-rouge">org.springframework.boot.actuate.trace.TraceRepository</code>没有存在的必要，故可选择关闭。</p>
+
+<ul>
+  <li>配置项</li>
+</ul>
+
+<div class="language-properties highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="py">spring.autoconfigure.exclude</span> <span class="p">=</span> <span class="s">org.springframework.boot.actuate.autoconfigure.TraceRepositoryAutoConfiguration</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="关闭-web-请求结果指标-自动装配">关闭 Web 请求结果指标 自动装配</h3>
+
+<h4 id="orgspringframeworkbootactuateautoconfiguremetricfilterautoconfiguration"><code class="highlighter-rouge">org.springframework.boot.actuate.autoconfigure.MetricFilterAutoConfiguration</code></h4>
+
+<p>该组件将自动装配<code class="highlighter-rouge">org.springframework.boot.actuate.autoconfigure.MetricsFilter</code>，该 Filter</p>
+
+<p>主要记录Web 请求结果指标（如：相应状态码、请求方法执行时间等），该信息一定程度上与反向代理服务器（nginx）功能重叠，故可选择关闭。</p>
+
+<ul>
+  <li>配置项</li>
+</ul>
+
+<div class="language-properties highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="py">spring.autoconfigure.exclude</span> <span class="p">=</span> <span class="s">org.springframework.boot.actuate.autoconfigure.MetricFilterAutoConfiguration</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="可关闭-servlet-web-组件">可关闭 Servlet Web 组件</h3>
+
+<h4 id="orgspringframeworkwebfilterhttpputformcontentfilter"><code class="highlighter-rouge">org.springframework.web.filter.HttpPutFormContentFilter</code></h4>
+
+<ul>
+  <li>引入版本</li>
+</ul>
+
+<p><code class="highlighter-rouge">org.springframework.web.filter.HttpPutFormContentFilter</code> 由 Spring
+Framework 3.1 版本引入，分发在 <code class="highlighter-rouge">org.springframework:spring-web</code> 中。</p>
+
+<ul>
+  <li>使用场景</li>
+</ul>
+
+<p>通常 Web 场景中，浏览器通过 HTTP <code class="highlighter-rouge">GET</code> 或者 <code class="highlighter-rouge">POST</code> 请求 提交 Form 数据，而非浏览
+器客户端（如应用程序）可能通过 HTTP <code class="highlighter-rouge">PUT</code> 请求来实现。</p>
+
+<p>当 HTTP 请求头<code class="highlighter-rouge">Content-Type</code> 为 <code class="highlighter-rouge">application/x-www-form-urlencoded</code> 时
+，Form 数据被 encoded。而 Servlet 规范中， <code class="highlighter-rouge">ServletRequest.getParameter*()</code>
+方法仅对 HTTP <code class="highlighter-rouge">POST</code> 方法支持请求参数的获取，如：</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="rouge-code"><pre><span class="kd">public</span> <span class="n">intetfacce</span> <span class="n">ServletRequest</span> <span class="o">{</span>
+
+    <span class="o">......</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getParameter</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">);</span>
+
+    <span class="kd">public</span> <span class="n">Enumeration</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="nf">getParameterNames</span><span class="o">();</span>
+
+    <span class="kd">public</span> <span class="n">String</span><span class="o">[]</span> <span class="nf">getParameterValues</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">);</span>
+
+    <span class="kd">public</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">[]&gt;</span> <span class="nf">getParameterMap</span><span class="o">();</span>
+
+    <span class="o">......</span>
+
+<span class="o">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>故 以上方法无法支持 HTTP <code class="highlighter-rouge">PUT</code> 或 HTTP <code class="highlighter-rouge">PATCH</code> 请求方法（请求头<code class="highlighter-rouge">Content-Type</code>
+为<code class="highlighter-rouge">application/x-www-form-urlencoded</code>）。</p>
+
+<p><code class="highlighter-rouge">org.springframework.web.filter.HttpPutFormContentFilter</code> 正是这种场景的解
+决方案。</p>
+
+<p>Spring Boot 默认场景下，将
+<code class="highlighter-rouge">org.springframework.web.filter.HttpPutFormContentFilter</code> 被
+<code class="highlighter-rouge">org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration</code> 自动
+装配，以下为 Spring Boot 1.4.1.RELEASE 以及更好版本定义（可能存在一定的差异）：</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+</pre></td><td class="rouge-code"><pre><span class="nd">@Configuration</span>
+<span class="nd">@ConditionalOnWebApplication</span>
+<span class="nd">@ConditionalOnClass</span><span class="o">({</span> <span class="n">Servlet</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">DispatcherServlet</span><span class="o">.</span><span class="na">class</span><span class="o">,</span>
+		<span class="n">WebMvcConfigurerAdapter</span><span class="o">.</span><span class="na">class</span> <span class="o">})</span>
+<span class="nd">@ConditionalOnMissingBean</span><span class="o">(</span><span class="n">WebMvcConfigurationSupport</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+<span class="nd">@AutoConfigureOrder</span><span class="o">(</span><span class="n">Ordered</span><span class="o">.</span><span class="na">HIGHEST_PRECEDENCE</span> <span class="o">+</span> <span class="mi">10</span><span class="o">)</span>
+<span class="nd">@AutoConfigureAfter</span><span class="o">({</span> <span class="n">DispatcherServletAutoConfiguration</span><span class="o">.</span><span class="na">class</span><span class="o">,</span>
+		<span class="n">ValidationAutoConfiguration</span><span class="o">.</span><span class="na">class</span> <span class="o">})</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">WebMvcAutoConfiguration</span> <span class="o">{</span>
+
+    <span class="o">......</span>
+
+    <span class="nd">@Bean</span>
+    <span class="nd">@ConditionalOnMissingBean</span><span class="o">(</span><span class="n">HttpPutFormContentFilter</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+    <span class="nd">@ConditionalOnProperty</span><span class="o">(</span><span class="n">prefix</span> <span class="o">=</span> <span class="s">"spring.mvc.formcontent.putfilter"</span><span class="o">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s">"enabled"</span><span class="o">,</span> <span class="n">matchIfMissing</span> <span class="o">=</span> <span class="kc">true</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="n">OrderedHttpPutFormContentFilter</span> <span class="nf">httpPutFormContentFilter</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">OrderedHttpPutFormContentFilter</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="o">......</span>
+
+<span class="o">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>综上所述，<code class="highlighter-rouge">org.springframework.web.filter.HttpPutFormContentFilter</code> 在绝大
+多数 Web 使用场景下为非必须组件。</p>
+
+<ul>
+  <li>配置项</li>
+</ul>
+
+<p>如果应用依赖 Spring Boot 版本 为 1.4.1.RELEASE 以及更高的版本，可通过如下配置，
+进行将 <code class="highlighter-rouge">org.springframework.web.filter.HttpPutFormContentFilter</code> 关闭：</p>
+
+<div class="language-properties highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="py">spring.mvc.formcontent.putfilter.enabled</span> <span class="p">=</span> <span class="s">false</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="orgspringframeworkwebfilterhiddenhttpmethodfilter"><code class="highlighter-rouge">org.springframework.web.filter.HiddenHttpMethodFilter</code></h4>
+
+<ul>
+  <li>引入版本</li>
+</ul>
+
+<p><code class="highlighter-rouge">org.springframework.web.filter.HiddenHttpMethodFilter</code> 由 Spring
+Framework 3.0 版本引入，分发在 <code class="highlighter-rouge">org.springframework:spring-web</code> 中。</p>
+
+<ul>
+  <li>使用场景</li>
+</ul>
+
+<p>当 Web 服务端同一资源（URL）提供了多请求方法的实现，例如 URI ：/update 提供了
+HTTP <code class="highlighter-rouge">POST</code> 以及 HTTP <code class="highlighter-rouge">PUT</code> 实现），通常 Web 场景中，浏览器仅支持 HTTP <code class="highlighter-rouge">GET</code>
+或者 <code class="highlighter-rouge">POST</code> 请求方法，这样的话，浏览器无法发起 HTTP <code class="highlighter-rouge">PUT</code> 请求。</p>
+
+<p>为了浏览器可以消费 HTTP <code class="highlighter-rouge">PUT</code> 资源， 需要在服务端将 HTTP <code class="highlighter-rouge">POST</code> 转化成
+HTTP <code class="highlighter-rouge">PUT</code> 请求，为了解决这类问题，Spring 引入
+<code class="highlighter-rouge">org.springframework.web.filter.HiddenHttpMethodFilter</code> Web 组件。</p>
+
+<p>当浏览器 发起 HTTP <code class="highlighter-rouge">POST</code> 请求时，可通过增加请求参数（默认参数名称：”_method”）
+的方式，进行HTTP 请求方法切换，
+<code class="highlighter-rouge">org.springframework.web.filter.HiddenHttpMethodFilter</code> 获取参数”_method”
+值后，将参数值作为 <code class="highlighter-rouge">HttpServletRequest#getMethod()</code>的返回值，给后续 <code class="highlighter-rouge">Servlet</code>
+实现使用。</p>
+
+<p>出于通用性的考虑，<code class="highlighter-rouge">org.springframework.web.filter.HiddenHttpMethodFilter</code>
+通过调用 <code class="highlighter-rouge">#setMethodParam(String)</code> 方法，来修改转换请求方法的参数名称。</p>
+
+<p>Spring Boot 默认场景下，将
+<code class="highlighter-rouge">org.springframework.web.filter.HttpPutFormContentFilter</code> 被
+<code class="highlighter-rouge">org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration</code> 自动
+装配，以下为 Spring Boot 1.4.1.RELEASE 以及更好版本定义（可能存在一定的差异）：</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+</pre></td><td class="rouge-code"><pre><span class="nd">@Configuration</span>
+<span class="nd">@ConditionalOnWebApplication</span>
+<span class="nd">@ConditionalOnClass</span><span class="o">({</span> <span class="n">Servlet</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">DispatcherServlet</span><span class="o">.</span><span class="na">class</span><span class="o">,</span>
+		<span class="n">WebMvcConfigurerAdapter</span><span class="o">.</span><span class="na">class</span> <span class="o">})</span>
+<span class="nd">@ConditionalOnMissingBean</span><span class="o">(</span><span class="n">WebMvcConfigurationSupport</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+<span class="nd">@AutoConfigureOrder</span><span class="o">(</span><span class="n">Ordered</span><span class="o">.</span><span class="na">HIGHEST_PRECEDENCE</span> <span class="o">+</span> <span class="mi">10</span><span class="o">)</span>
+<span class="nd">@AutoConfigureAfter</span><span class="o">({</span> <span class="n">DispatcherServletAutoConfiguration</span><span class="o">.</span><span class="na">class</span><span class="o">,</span>
+		<span class="n">ValidationAutoConfiguration</span><span class="o">.</span><span class="na">class</span> <span class="o">})</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">WebMvcAutoConfiguration</span> <span class="o">{</span>
+
+    <span class="o">......</span>
+
+    <span class="nd">@Bean</span>
+    <span class="nd">@ConditionalOnMissingBean</span><span class="o">(</span><span class="n">HiddenHttpMethodFilter</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="n">OrderedHiddenHttpMethodFilter</span> <span class="nf">hiddenHttpMethodFilter</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">OrderedHiddenHttpMethodFilter</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="o">......</span>
+
+<span class="o">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>综上所述，<code class="highlighter-rouge">org.springframework.web.filter.HiddenHttpMethodFilter</code> 也是特殊
+场景下所需，故可以关闭之。</p>
+
+<ul>
+  <li>配置项</li>
+</ul>
+
+<p>按目前最新的 Spring Boot 1.5.2.RELEASE 版本中实现，也没有提供类似
+<code class="highlighter-rouge">spring.mvc.formcontent.putfilter.enabled</code> 这样的配置项关闭，无法关闭。</p>
+
