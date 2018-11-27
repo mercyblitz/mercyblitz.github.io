@@ -47,7 +47,6 @@
     var $toggle = document.querySelector('.navbar-toggle');
     var $navbar = document.querySelector('#huxblog_navbar');
     var $collapse = document.querySelector('.navbar-collapse');
-
     var __HuxNav__ = {
         close: function(){
             $navbar.className = " ";
@@ -64,7 +63,6 @@
             $navbar.className += " in";
         }
     }
-
     // Bind Event
     $toggle.addEventListener('click', function(e){
         if ($navbar.className.indexOf('in') > 0) {
@@ -73,7 +71,6 @@
             __HuxNav__.open()
         }
     })
-
     /**
      * Since Fastclick is used to delegate 'touchstart' globally
      * to hack 300ms delay in iOS by performing a fake 'click',
