@@ -12,7 +12,7 @@
 
 ## 自序
 
-- [《核心篇》](/books/thinking-in-spring-boot/core/preface/)
+- [《核心篇》](/books/thinking-in-spring-boot/core/preface/)
 - 《运维篇》（更新中...）
 - 《 Web 篇》（更新中...）
 
