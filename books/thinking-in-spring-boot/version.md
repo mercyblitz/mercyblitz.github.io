@@ -27,3 +27,8 @@
 为了理解 Spring Boot 特性发展的过程，将 Spring Framework 版本讨论的范围从 1.x 到 5.0。换言之，本书将几乎涵盖所有的 Spring Framework 以及 Spring Boot 版本，包括两者所涉及的 [JSR](https://jcp.org/en/jsr/overview)（Java Specification Requests），如 Servlet 、Bean Validation 和 JAX-RS 等规范。
 
 > 小马哥提示您：更多的 JSR 资讯，请参考官方网页 [https://jcp.org/en/jsr/overview](https://jcp.org/en/jsr/overview)，或访问小马哥 JSR 收藏页面 [https://github.com/mercyblitz/jsr](https://github.com/mercyblitz/jsr)，下载归档的 JSR PDF 文件。
+
+
+
+
+## [返回](/books/thinking-in-spring-boot/)

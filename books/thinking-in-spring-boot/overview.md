@@ -24,3 +24,7 @@
 所谓 ”兼听则明，偏听则暗”，本书的讨论范围并不会局限在 Spring Boot 或 Spring Framework，也将 Spring Cloud 甚至是 Spring Cloud Data Flow 纳入参考，探讨 Spring Boot 在两者中的运用。站在更为宏观的角度，在整个 Java EE 的生态中，Spring 技术栈并非独此一家，也不完全是“开山之作”，不少相关的特性可在 JSR 规范以及其他 Java EE 实现中找到原型。换言之，Spring 技术栈可认为是一种非常成功的“重复发明轮子”，不仅适配了 JSR 实现，而且“借鉴”了他山之石，逐步实现了自身的生态系统。
 
 总而言之，全书的讨论将以 Spring Boot 为中心，议题发散至 Spring 技术栈、JSR 以及 Java。希望透过全局的视角，了解变迁的历程；经过多方的比较，理解特性的原理；综合标准的规范，掌握设计的哲学。当您纵览全书之后，或许将会明白为什么说 “Spring Boot 易学难精“，因为它的核心是 Spring Framework，而后者的理解程度又取决于 JSR 规范以及 Java 的熟悉度。或许 Spring 技术栈不算一流的技术，却是一等的成功。
+
+
+
+## [返回](/books/thinking-in-spring-boot/)
