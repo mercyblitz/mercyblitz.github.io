@@ -14,15 +14,9 @@
 ## 导航
 
 - [内容总览](/books/thinking-in-spring-boot/overview/)
-
 - [版本范围](/books/thinking-in-spring-boot/version/)
-
 - [相关约定](/books/thinking-in-spring-boot/conventions/)
-
 - [配套视频](/books/thinking-in-spring-boot/videos/)
-  
 - [示例工程](https://github.com/mercyblitz/thinking-in-spring-boot-samples)
-
 - [勘误汇总](/books/thinking-in-spring-boot/revision/)
-
 - [公益资金流向](/books/thinking-in-spring-boot/donate/)
