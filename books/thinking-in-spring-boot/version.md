@@ -22,7 +22,7 @@
 | `1.1.9.RELEASE`  | `4.0.8.RELEASE`       | 1.6+     |
 | `1.0.2.RELEASE`  | `4.0.3.RELEASE`       | 1.6+     |
 
-不难看出，Spring Boot 2.0 对应的 Spring Framework 版本是 5.0，而 Spring Boot 1.x 则依赖于 Spring Framework 4.x。之所以要具体到 Spring Framework 的某个版本号，除了避免版本差异所导致源码分析失准的情况，更多的是由于 Spring 技术栈特殊的版本号管理。按照传统 Java 版本的约定，第一位数字表示主版本号，控制大版本更新，第二位则代表次版本号，可小范围地引入新的特性和相关 API，而第三位则用于问题修正或安全补丁等。而 Spring 技术栈不时地利用第三位版本号引入新的 API，典型的代表有 Spring Framework 3.0.1 引入的 API `BeanDefinitionRegistryPostProcessor`，Spring Boot 1.3.2 引入的 API `ExitCodeEvent`。同时，在框架 API 的兼容性，从 Spring Framework 到 Spring Cloud 逐渐降低，Spring Boot 处于比上不足比下有余的情况。因此，本书在深入讨论的过程中反复地强调 API 兼容的重要新，也希望读者在自研的过程中尤为关注。
+不难看出，Spring Boot 2.0 对应的 Spring Framework 版本是 5.0，而 Spring Boot 1.x 则依赖于 Spring Framework 4.x。之所以要具体到 Spring Framework 的某个版本号，除了避免版本差异所导致源码分析失准的情况，更多的是由于 Spring 技术栈特殊的版本号管理。按照传统 Java 版本的约定，第一位数字表示主版本号，控制大版本更新，第二位则代表次版本号，可小范围地引入新的特性和相关 API，而第三位则用于问题修正或安全补丁等。而 Spring 技术栈不时地利用第三位版本号引入新的 API，典型的代表有 Spring Framework 3.0.1 引入的 API `BeanDefinitionRegistryPostProcessor`，Spring Boot 1.3.2 引入的 API `ExitCodeEvent`。同时，在框架 API 的兼容性，从 Spring Framework 到 Spring Cloud 逐渐降低，Spring Boot 处于比上不足比下有余的情况。因此，本书在深入讨论的过程中反复地强调 API 兼容的重要性，也希望读者在自研的过程中尤为关注。
 
 为了理解 Spring Boot 特性发展的过程，将 Spring Framework 版本讨论的范围从 1.x 到 5.0。换言之，本书将几乎涵盖所有的 Spring Framework 以及 Spring Boot 版本，包括两者所涉及的 [JSR](https://jcp.org/en/jsr/overview)（Java Specification Requests），如 Servlet 、Bean Validation 和 JAX-RS 等规范。
 
