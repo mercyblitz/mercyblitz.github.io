@@ -11,9 +11,13 @@
 - [斗鱼直播](https://www.douyu.com/mercyblitz)：[https://www.douyu.com/mercyblitz](https://www.douyu.com/mercyblitz)
 
 
+
+
 ## 著书
 
-- 《Spring Boot 编程思想》（即将发行）
+- [《Spring Boot 编程思想》](/books/thinking-in-spring-boot/)（即将发行）
+
+
 
 
 ## 线上分享
