@@ -10,18 +10,22 @@
 
 
 
+
 ## 自序
 
-- [《核心篇》](/books/thinking-in-spring-boot/core/preface/)
-- 《运维篇》（更新中...）
-- 《 Web 篇》（更新中...）
+- [《核心篇》](https://mercyblitz.github.io/books/thinking-in-spring-boot/core/preface/)
+- 《运维篇》(更新中...)
+- 《Web 篇》(更新中...)
+
+
+
 
 ## 扉页
 
-- [内容总览](/books/thinking-in-spring-boot/overview/)
-- [版本范围](/books/thinking-in-spring-boot/version/)
-- [相关约定](/books/thinking-in-spring-boot/conventions/)
-- [配套视频](/books/thinking-in-spring-boot/videos/)
-- [示例工程](https://github.com/mercyblitz/thinking-in-spring-boot-samples)
-- [勘误汇总](/books/thinking-in-spring-boot/revision/)
-- [公益资金流向](/books/thinking-in-spring-boot/donate/)
+- [内容总览](https://mercyblitz.github.io/books/thinking-in-spring-boot/overview/)
+- [版本范围](https://mercyblitz.github.io/books/thinking-in-spring-boot/version/)
+- [相关约定](https://mercyblitz.github.io/books/thinking-in-spring-boot/conventions/)
+- [配套视频](https://mercyblitz.github.io/books/thinking-in-spring-boot/videos/)
+- [示例工程](https://mercyblitz.github.io/books/thinking-in-spring-boot/samples/)
+- [勘误汇总](https://mercyblitz.github.io/books/thinking-in-spring-boot/revision/)
+- [公益资金流向](https://mercyblitz.github.io/books/thinking-in-spring-boot/donate/)
