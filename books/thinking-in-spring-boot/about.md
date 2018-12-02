@@ -16,14 +16,17 @@
 
 
 
-## 基本信息
+## 交流社区
 
 - 微信公众号：次灵均阁
   
 ![微信公众号二维码](assets/my_mp_qrcode.jpg)
 
+- [知识星球](https://t.zsxq.com/72rj2rr)：
+  
+![小马哥 Java 星球](assets/my_java_planet.png)
+
 - [Github](http://github.com/mercyblitz)：[http://github.com/mercyblitz](http://github.com/mercyblitz)
-- [斗鱼直播](https://www.douyu.com/mercyblitz)：[https://www.douyu.com/mercyblitz](https://www.douyu.com/mercyblitz)
 
 > 更多个人信息，请使用 [Google 搜索 `mercyblitz`](https://www.google.com/search?q=mercyblitz)
 
