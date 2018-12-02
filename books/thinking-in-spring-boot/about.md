@@ -19,6 +19,9 @@
 ## 基本信息
 
 - 微信公众号：次灵均阁
+  
+![微信公众号二维码](assets/my_mp_qrcode.jpg)
+
 - [Github](http://github.com/mercyblitz)：[http://github.com/mercyblitz](http://github.com/mercyblitz)
 - [斗鱼直播](https://www.douyu.com/mercyblitz)：[https://www.douyu.com/mercyblitz](https://www.douyu.com/mercyblitz)
 
