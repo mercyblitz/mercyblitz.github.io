@@ -36,5 +36,5 @@
 ## 主要开源项目
 
 - [Spring Cloud Alibaba](https://github.com/spring-cloud-incubator/spring-cloud-alibaba)：https://github.com/spring-cloud-incubator/spring-cloud-alibaba
-- [Apache Dubbo](https://github.com/apache/dubbo)：https://github.com/apache/dubbo
+- [Apache Dubbo](https://github.com/apache/incubator-dubbo)：https://github.com/apache/incubator-dubbo
 - [Nacos](https://github.com/alibaba/nacos)：https://github.com/alibaba/nacos
