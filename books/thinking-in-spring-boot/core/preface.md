@@ -22,5 +22,4 @@
 
 
 <div style="text-align: right">小马哥</div>
-
-<div style="text-align: right">公元二零一八年 十一月二十二日 于杭州</div>
+<div style="text-align: right">公元二零一八年 十一月 于杭州</div>
