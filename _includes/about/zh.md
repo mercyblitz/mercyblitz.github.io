@@ -13,7 +13,7 @@
 
 
 
-## 著书
+## 著书
 
 - [《Spring Boot 编程思想》](/books/thinking-in-spring-boot/)（即将发行）
 
@@ -23,7 +23,7 @@
 ## 线上分享
 
 - 慕课网
-    - [Spring Boot 2.0深度实践之核心技术篇](https://coding.imooc.com/class/252.html)
+    - [Spring Boot 2.0深度实践之核心技术篇](https://coding.imooc.com/class/252.html)
     - Spring Boot 2.0深度实践之生态整合篇（即将上线...）
 - SegmentFault
     - [Java 微服务实践 - Spring Boot / Spring Cloud](https://segmentfault.com/ls/1650000011387052)
@@ -35,7 +35,7 @@
     - [「小马哥技术周报」直播](https://www.douyu.com/mercyblitz)
 
 
-## 线下分享
+## 线下分享
 
 - Spring Cloud Alibaba 致力于提供分布式应用开发的一站式解决方法 · [CNCC 2018](http://cncc2018.ccf.org.cn/cms/show.action?code=publish_ff80808162f165f90163070bf87105de&siteid=100000&channelid=0000000002)
 - Dubbo Cloud Native 之路的实践与思考 · [Dubbo开发者沙龙（上海站）- 2018 Aliware技术行](https://www.itdks.com/eventlist/detail/2307)
