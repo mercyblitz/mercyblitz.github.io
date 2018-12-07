@@ -24,7 +24,7 @@
 
 - 慕课网
     - [Spring Boot 2.0深度实践之核心技术篇](https://coding.imooc.com/class/252.html)
-    - Spring Boot 2.0深度实践之生态整合篇（即将上线...）
+    - Spring Boot 2.0深度实践之生态整合篇（即将上线...）
 - SegmentFault
     - [Java 微服务实践 - Spring Boot / Spring Cloud](https://segmentfault.com/ls/1650000011387052)
 
