@@ -32,7 +32,7 @@
     - [「小马哥技术周报」录播](https://space.bilibili.com/327910845/#/channel/detail?cid=52311)
 
 - 斗鱼
-    - [「小马哥技术周报」直播](https://www.douyu.com/mercyblitz)
+    - [「小马哥技术周报」直播](https://www.douyu.com/mercyblitz)
 
 
 ## 线下分享
