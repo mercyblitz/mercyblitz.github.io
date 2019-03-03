@@ -15,7 +15,7 @@
 
 ## 自序
 
-- [《核心篇》](https://mercyblitz.github.io/books/thinking-in-spring-boot/core/preface/)（第二次修订完成，复审中，即将出版...）
+- [《核心篇》](https://mercyblitz.github.io/books/thinking-in-spring-boot/core/preface/)（即将预售...）
 - 《运维篇》（即将完稿...)
 - 《Web 篇》(编写中...)
 
@@ -50,10 +50,12 @@
 
 - 微信公众号：次灵均阁
   
+
 ![微信公众号二维码](assets/my_mp_qrcode.jpg)
 
 - [知识星球](https://t.zsxq.com/72rj2rr)：
   
+
 ![小马哥 Java 星球](assets/my_java_planet.png)
 
 - [Github](http://github.com/mercyblitz)：[http://github.com/mercyblitz](http://github.com/mercyblitz)

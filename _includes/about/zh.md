@@ -2,7 +2,7 @@
 
 大家好，我是小马哥，[Java 劝退师](https://www.douyu.com/mercyblitz)，[Apache Dubbo](https://dubbo.apache.org/) PPMC、[Spring Cloud Alibaba](https://github.com/spring-cloud-incubator/spring-cloud-alibaba) 项目架构师。目前主要负责集团中间件开源项目、微服务技术实施、架构衍进、基础设施构建等。通过 SUN Java（SCJP、SCWCD、SCBCD）以及 Oracle OCA 等的认证。
 
-- 微信：mercyblitz
+- 微信：mercyblitz-1985
 - 微信公众号：次灵均阁
 - [微博](https://weibo.com/mercyblitz)：[@mercyblitz](https://weibo.com/mercyblitz)
 - [Github](http://github.com/mercyblitz)：[http://github.com/mercyblitz](http://github.com/mercyblitz)
@@ -15,7 +15,7 @@
 
 ## 著书
 
-- [《Spring Boot 编程思想》](/books/thinking-in-spring-boot/)（即将发行）
+- [《Spring Boot 编程思想》](/books/thinking-in-spring-boot/)（即将预售）
 
 
 

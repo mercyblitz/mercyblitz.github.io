@@ -1,7 +1,7 @@
 
 > Hard Code in Internet，Think Big Data too much
 
-Hi, I'm Mercy Ma, as a member in [Apache Dubbo](https://dubbo.apache.org/) PPMC, an achitecture of [Spring Cloud Alibaba](https://github.com/spring-cloud-incubator/spring-cloud-alibaba), and working on Open Source projects and Micro Services infrastructure, certificated SUN Java（SCJP、SCWCD、SCBCD）, Oracle OCA and so on.
+Hi, I'm Mercy Ma, as a member in [Apache Dubbo](https://dubbo.apache.org/) PPMC, an achitecture of [Spring Cloud Alibaba](https://github.com/spring-cloud-incubator/spring-cloud-alibaba), and working on Open Source projects and Micro Services infrastructure, certificated SUN Java（SCJP、SCWCD、SCBCD）, Oracle OCA and so on.
 
 
 ## Books
