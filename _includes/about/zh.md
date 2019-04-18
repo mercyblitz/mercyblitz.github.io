@@ -7,7 +7,7 @@
 - [Github](http://github.com/mercyblitz)：[http://github.com/mercyblitz](http://github.com/mercyblitz)
 - [Twitter](https://twitter.com/mercyblitz)：[@mercyblitz](https://twitter.com/mercyblitz)
 - 微信公众号：**次灵均阁**
-![次灵均阁二维码](/assets/my_mp_qrcode.jpg)
+![次灵均阁二维码](/img/assets/my_mp_qrcode.jpg)
 
 
 
