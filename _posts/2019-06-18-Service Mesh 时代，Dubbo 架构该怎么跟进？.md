@@ -143,10 +143,10 @@ Dubbo 3.0.0 M1 版本的核心特性围绕在 RSocket、Reactive 以及异步化
 > - 源码解读：理解设计思想
 > - 实战演练：巩固学习成果
 
--《Spring Cloud 微服务实战》https://item.jd.com/12172344.html
--《深⼊入理理解Kafka：核⼼心设计与实践原理理》 https://item.jd.com/12489649.html
--《未来架构 从服务化到云原⽣生》 https://item.jd.com/12498217.html
--《⾼高可⽤用可伸缩微服务架构：基于Dubbo、Spring Cloud和Service Mesh》https://item.jd.com/12585284.html
--《Kubernetes权威指南：从Docker到Kubernetes实践全接触》https://item.jd.com/12601558.html
--《Java编程⽅方法论：响应式RxJava与代码设计实战》 https://item.jd.com/12615848.html
+- [《Spring Cloud 微服务实战》](https://item.jd.com/12172344.html)
+- [《深⼊入理理解Kafka：核⼼心设计与实践原理理》](https://item.jd.com/12489649.html)
+- [《未来架构 从服务化到云原⽣生》](https://item.jd.com/12498217.html)
+- [《⾼高可⽤用可伸缩微服务架构：基于Dubbo、Spring Cloud和Service Mesh》](https://item.jd.com/12585284.html) 
+- [《Kubernetes权威指南：从Docker到Kubernetes实践全接触》](https://item.jd.com/12601558.html)
+- [《Java编程⽅方法论：响应式RxJava与代码设计实战》](https://item.jd.com/12615848.html)
 
