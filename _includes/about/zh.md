@@ -1,7 +1,8 @@
 > 手淫互联网，意淫大数据
 
-大家好，我是小马哥（mercyblitz），[Java 劝退师](https://www.douyu.com/mercyblitz)，[Apache Dubbo](https://dubbo.apache.org/) PMC、[Spring Cloud Alibaba](https://github.com/spring-cloud-incubator/spring-cloud-alibaba) 项目架构师。目前主要负责集团中间件开源项目、微服务技术实施、架构衍进、基础设施构建等。通过 SUN Java（SCJP、SCWCD、SCBCD）以及 Oracle OCA 等的认证。
+大家好，我是小马哥（mercyblitz），[Java 劝退师](https://www.douyu.com/mercyblitz)，[Apache Dubbo](https://dubbo.apache.org/) PMC、[Spring Cloud Alibaba](https://github.com/spring-cloud-incubator/spring-cloud-alibaba) 项目架构师，通过 SUN Java（SCJP、SCWCD、SCBCD）以及 Oracle OCA 等的认证。目前为自由职业者，承接企业培训、架构设计和咨询等业务。
 
+- 电子邮箱：mercyblitz@gmail.com
 - 微信：mercyblitz-1985
 - [微博](https://weibo.com/mercyblitz)：[@mercyblitz](https://weibo.com/mercyblitz)
 - [Github](http://github.com/mercyblitz)：[http://github.com/mercyblitz](http://github.com/mercyblitz)
