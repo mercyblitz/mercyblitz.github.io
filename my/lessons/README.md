@@ -1,7 +1,5 @@
 # 《小马哥的课程》
 
-
-
 ### 免费课程
 
 - 「B 站」
@@ -23,21 +21,13 @@
 ### 收费课程
 
 - 「极客时间」
-  
-  - [小马哥讲Spring核心编程思想](https://time.geekbang.org/course/intro/100042601)
-- [小马哥讲Spring AOP编程思想](https://time.geekbang.org/course/intro/100066301)
-  - [小马哥的 Java 项目实战营](https://u.geekbang.org/subject/java2nd)
-  
+  - [小马哥的 Java 项目实战营]（推荐）(https://u.geekbang.org/subject/java2nd)
+  -   - [小马哥讲Spring核心编程思想](https://time.geekbang.org/course/intro/100042601)
+  - [小马哥讲Spring AOP编程思想](https://time.geekbang.org/course/intro/100066301)
+
 - 「慕课网」
-  
   - [Spring Boot2.0深度实践之核心技术篇](http://t.cn/ReChCU9)
 
 - 「思否（SegementFault）」
-  
   - [Java 微服务实践 - Spring Boot / Spring Cloud](https://segmentfault.com/ls/1650000011387052)（原价：~~1024~~，福利价（五折）：`512`）
 - [「一入 Java 深似海 」系列课程](http://t.cn/AisU8cBk)（原价：~~1024~~，福利价（五折）：`512`）
-  
-  
-  
-  
-
