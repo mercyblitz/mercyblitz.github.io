@@ -16,8 +16,8 @@
   - [Spring Boot 2.0深度实践之系列总览](https://www.imooc.com/learn/1058)
 - 「[思否（SegementFault）](https://segmentfault.com/u/mercyblitz)」
   - [「小马哥 2019 跨年直播」](https://mp.weixin.qq.com/s?__biz=MzIxNDU4NjE1OQ==&mid=2247484085&idx=1&sn=5905f53e69bae9d48b3783a83bde40b3)
-  - [「小马哥 2020 跨年直播」](https://ke.sifou.com/course/1650000021471857)
-  - [「小马哥 2021 跨年直播」](https://ke.sifou.com/course/1650000038776105)
+  - [「小马哥 2020 跨年直播」](https://ke.segmentfault.com/course/1650000021471857)
+  - [「小马哥 2021 跨年直播」](https://ke.segmentfault.com/course/1650000038776105)
   - 「小马哥 2022 跨年直播」
   - [「小马哥 2023 跨年直播」](https://ke.segmentfault.com/course/1650000043206740)
 
